@@ -1,8 +1,26 @@
 package org.example.data_type;
 
 public class Person {
-    private String firstName, secondName;
+    private String firstName, lastName;
     private int passportId;
+
+    public Person() {
+    }
+
+    public Person(String firstName, String lastName) {
+        this.lastName = lastName;
+        this.firstName = firstName;
+    }
+
+    public Person(int passportId) {
+        this.passportId = passportId;
+    }
+
+    public Person(String firstName, String lastName, int passportId) {
+        this.lastName = lastName;
+        this.firstName = firstName;
+        this.passportId = passportId;
+    }
 
     public String getFirstName() {
         return firstName;
@@ -12,8 +30,8 @@ public class Person {
         return passportId;
     }
 
-    public String getSecondName() {
-        return secondName;
+    public String getLastName() {
+        return lastName;
     }
 
     public void setFirstName(String firstName) {
@@ -24,7 +42,7 @@ public class Person {
         this.passportId = passportId;
     }
 
-    public void setSecondName(String secondName) {
-        this.secondName = secondName;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 }
