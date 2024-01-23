@@ -8,4 +8,8 @@ public class Point {
         this.y = y;
         this.z = z;
     }
+
+    public double length() {
+        return java.lang.Math.sqrt(x * x + y * y + z * z);
+    }
 }
