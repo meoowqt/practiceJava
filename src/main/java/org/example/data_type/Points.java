@@ -1,6 +1,5 @@
 package org.example.data_type;
 
-import java.util.Vector;
 
 public class Points {
     private Points() {
