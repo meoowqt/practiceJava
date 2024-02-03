@@ -7,7 +7,7 @@ import static org.testng.Assert.*;
 public class PersonTest {
     Person p1 = new Person("Иван", "Иванов");
     Person p2 = new Person(1235689);
-    Person p3 = new Person("Иван", "Иванов", 11235667);
+    Person p3 = new Person("Иван", "Иванов", 11235667, Gender.MALE);
     Person p4 = new Person();
     Person p5 = new Person();
 
@@ -55,5 +55,18 @@ public class PersonTest {
         p5.setLastName("Иванов");
         assertEquals(p4.getLastName(), "Иванов");
         assertEquals(p5.getLastName(), "Иванов");
+    }
+
+    @Test
+    public void testGetGender() {
+        assertNull(p2.getGender());
+        assertEquals(p3.getGender(), Gender.MALE);
+    }
+    @Test
+    public void testSetGender() {
+        p4.setGender(Gender.MALE);
+        p5.setGender(Gender.FEMALE);
+        assertEquals(p4.getGender(), Gender.MALE);
+        assertEquals(p5.getGender(), Gender.FEMALE);
     }
 }
