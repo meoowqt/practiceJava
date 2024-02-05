@@ -1,6 +1,6 @@
 package org.example.data_type;
 
-public class NamePoint extends Point {
+public class NamePoint extends Point implements Resettable {
     private String name;
 
     public NamePoint(double x, double y, double z) {
@@ -24,5 +24,10 @@ public class NamePoint extends Point {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public void reset() {
+        name = "Absent";
     }
 }

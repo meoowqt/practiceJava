@@ -26,4 +26,14 @@ public class NamePointTest {
         assertEquals(first.getName(), "Point1");
         assertEquals(second.getName(), "Point2");
     }
+
+    @Test
+    public void testReset() {
+        NamePoint first = new NamePoint(1, 3, 9, "Point1");
+        NamePoint second = new NamePoint(5, 34, 1, "Point2");
+        first.reset();
+        second.reset();
+        assertEquals(first.getName(), "Absent");
+        assertEquals(second.getName(), "Absent");
+    }
 }
